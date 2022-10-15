@@ -27,6 +27,8 @@ fn hello() -> &'static str {
     "Hello, world!"
 }
 
+#[rocket::main]
 fn main() {
     rocket::ignite().mount("/", routes![hello]).launch();
+	Ok(())
 }
